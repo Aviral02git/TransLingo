@@ -1,0 +1,126 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  color: #222;
+}
+
+/* Hero Section */
+.hero-section {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 20px;
+  margin: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+
+}
+
+.brand-name {
+  background: linear-gradient(to right, #ff4081, #7c4dff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #ff6f61, #ba68c8);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(186, 104, 200, 0.4);
+}
+
+/* Feature Sections */
+.features-intro, .features-highlight, .why-section, .final-cta {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffffea;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.final-cta {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #ffffffea;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center; 
+  }
+  
+  .final-cta h2 {
+    font-size: 2rem;
+    background: linear-gradient(to right, #7b1fa2, #f06292);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+  }
+  
+  .final-cta .cta-button {
+    display: inline-block; /* ✅ Important to center inline elements */
+  }
+  
+
+.features-highlight ul {
+  list-style-type: '🌍 ';
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.features-highlight li {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Headings */
+.features-intro h2,
+.features-highlight h2,
+.why-section h2,
+.final-cta h2 {
+  font-size: 2rem;
+  background: linear-gradient(to right, #7b1fa2, #f06292);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.4rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.5rem;
+  }
+}
