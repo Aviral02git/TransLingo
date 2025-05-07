@@ -1,53 +1,71 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-.home-container {
-  font-family: 'Poppins', sans-serif;
-  padding: 0;
+* {
   margin: 0;
-  background: linear-gradient(to right, #e0f7fa, #fce4ec);
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Hero Section */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.home-container {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
 .hero-section {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
+  background: 
+    linear-gradient(135deg, rgba(238, 241, 248, 0.5), rgba(255, 255, 255, 0.5)),
+    url("/images/background-map.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 6rem 2rem;
-  border-radius: 20px;
-  margin: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
 }
 
 
 .hero-section h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #222;
+  color: #1a1a1a;
   margin-bottom: 1rem;
-
-}
-
-.brand-name {
-  background: linear-gradient(to right, #ff4081, #7c4dff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color: transparent;
 }
 
 .hero-section p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #444;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand-name {
+  background: linear-gradient(to right, #3b5998, #8b9dc3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .cta-button {
-  background: linear-gradient(to right, #ff6f61, #ba68c8);
+  background: #007bff;
   padding: 0.75rem 2rem;
   font-size: 1rem;
   color: #fff;
   border: none;
-  border-radius: 40px;
+  border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
@@ -55,72 +73,59 @@
 
 .cta-button:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(186, 104, 200, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
 }
 
-/* Feature Sections */
-.features-intro, .features-highlight, .why-section, .final-cta {
-  max-width: 900px;
+.hero-image {
+  max-width: 500px;
+  width: 90%;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.features-intro,
+.features-highlight,
+.why-section,
+.final-cta {
+  max-width: 1000px;
   margin: 3rem auto;
   padding: 2rem;
-  background: #ffffffea;
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-.final-cta {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background: #ffffffea;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    text-align: center; 
-  }
-  
-  .final-cta h2 {
-    font-size: 2rem;
-    background: linear-gradient(to right, #7b1fa2, #f06292);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1.5rem;
-  }
-  
-  .final-cta .cta-button {
-    display: inline-block; /* ✅ Important to center inline elements */
-  }
-  
 
 .features-highlight ul {
-  list-style-type: '🌍 ';
-  padding-left: 1.5rem;
-  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
 }
 
 .features-highlight li {
   margin-bottom: 1rem;
-  font-weight: 500;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
-/* Headings */
-.features-intro h2,
-.features-highlight h2,
-.why-section h2,
-.final-cta h2 {
-  font-size: 2rem;
-  background: linear-gradient(to right, #7b1fa2, #f06292);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+.features-highlight li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.student-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 0;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.final-cta {
   text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.4rem;
-  }
-
-  .cta-button {
-    padding: 0.6rem 1.5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

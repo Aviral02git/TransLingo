@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 
+
 function Home() {
   return (
     <div className="home-container">
@@ -9,7 +10,6 @@ function Home() {
         <p>Your smart companion for language translation, learning, and growth — all in one place.</p>
         <a href="/signup" className="cta-button">Get Started</a>
       </section>
-
       <section className="features-intro">
         <h2>What is TransLingo?</h2>
         <p>
