@@ -1,0 +1,80 @@
+/* Blog.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.blog-title {
+  text-align: center;
+  color: #2d6cdf;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+
+.post-title {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.post-content {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.see-more-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .see-more-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .see-more-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  
+  

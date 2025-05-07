@@ -7,6 +7,9 @@ const Services = () => {
     <div style={{ padding: '2rem' }}>
       <h2>Explore Our Language Services</h2>
       <Translator />
+      {/* <Dictionary />
+      <Quiz />
+      <Progress /> */}
     </div>
   );
 };
