@@ -1,4 +1,4 @@
-// src/components/Translator.jsxgi
+
 import React, { useState } from 'react';
 
 const Translator = () => {
