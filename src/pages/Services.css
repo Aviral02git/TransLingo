@@ -1,0 +1,266 @@
+/* services.css */
+
+.services-container {
+    padding: 3rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f8ff, #ffffff);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .services-banner {
+    position: relative;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .services-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 12px;
+  }
+  
+  .services-banner h1,
+  .services-banner p {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .services-banner h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .services-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a202c;
+  }
+  
+  .services-header h2 span {
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .services-header h2 span:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .services-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Updated Hero Section */
+  .hero-section {
+    position: relative;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+    border-radius: 12px;
+  }
+  
+  .hero-section h1,
+  .hero-section p {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  /* Simple fade-in animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .services-container {
+      padding: 2rem;
+    }
+  
+    .services-header h2 {
+      font-size: 2rem;
+    }
+  
+    section {
+      margin-bottom: 2rem;
+    }
+  
+    .hero-section {
+      padding: 80px 15px;
+    }
+  
+    .hero-section h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Service section styles */
+  .service-section {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .service-section h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+  }
+  
+  .card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .card {
+    padding: 1rem;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #16a085;
+  }
+  
+  .card-category {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+  }
+  
+  /* Quiz Button Styles */
+  .quiz-options button {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quiz-options button:hover {
+    background-color: #d0d3d4;
+  }
+  
+  .quiz-options .correct {
+    background-color: #2ecc71 !important;
+    color: white;
+  }
+  
+  .quiz-options .incorrect {
+    background-color: #e74c3c !important;
+    color: white;
+  }
+  
+  /* Progress Card Styles */
+  .progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .progress-card {
+    background-color: #ffffff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    transition: transform 0.2s ease;
+  }
+  
+  .progress-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .progress-card .value {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .progress-card .label {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  

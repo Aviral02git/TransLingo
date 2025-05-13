@@ -1,0 +1,65 @@
+.progress-container {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .progress-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .progress-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 600px) {
+    .progress-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .progress-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .progress-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .progress-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-number.blue {
+    color: #3b82f6;
+  }
+  
+  .progress-number.green {
+    color: #10b981;
+  }
+  
+  .progress-number.red {
+    color: #ef4444;
+  }
+  
+  .progress-label {
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+  

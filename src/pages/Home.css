@@ -21,9 +21,8 @@ body {
 
 .hero-section {
   background: 
-    linear-gradient(135deg, rgba(238, 241, 248, 0.5), rgba(255, 255, 255, 0.5)),
+    /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
     url('../background-map.jpeg');
-    
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,29 +31,30 @@ body {
   border-radius: 12px;
   margin: 2rem auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: #000;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
+  
 }
-
 
 .hero-section h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .hero-section p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #666;
+  color: #f1f1f1;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .brand-name {
-  background: linear-gradient(to right, #3b5998, #8b9dc3);
+  background: linear-gradient(to right, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -69,6 +69,8 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative; /* Add this */
+  z-index: 10;  
 }
 
 .cta-button:hover {
