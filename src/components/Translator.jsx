@@ -4,12 +4,39 @@ import './Translator.css';
 const Translator = () => {
   const [text, setText] = useState('');
   const [translated, setTranslated] = useState('');
-  const [language, setLanguage] = useState('es'); // default to Spanish
+  const [language, setLanguage] = useState('fr'); // default to French
 
-  const handleTranslate = () => {
-    // Dummy translation logic for now
-    setTranslated(`Translated to ${language.toUpperCase()}: ${text}`);
+  const handleTranslate = async () => {
+    try {
+      const params = new URLSearchParams();
+      params.append("source_language", "en");
+      params.append("target_language", language);
+      params.append("text", text);
+  
+      const response = await fetch("https://text-translator2.p.rapidapi.com/translate", {
+        method: "POST",
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+          "X-RapidAPI-Key": "8aba8eeea5msh25f480eab56c4fbp107cd1jsn44acf57d06e6",
+          "X-RapidAPI-Host": "text-translator2.p.rapidapi.com"
+        },
+        body: params
+      });
+  
+      const data = await response.json();
+      const translatedText = data.data.translatedText;
+  
+      if (translatedText) {
+        setTranslated(`Translated to ${language.toUpperCase()}: ${translatedText}`);
+      } else {
+        setTranslated("Translation failed. Please check the input or try again later.");
+      }
+    } catch (error) {
+      console.error("Translation error:", error);
+      setTranslated("Error translating text. Please try again.");
+    }
   };
+  
 
   return (
     <div className="translator-container">
@@ -26,7 +53,6 @@ const Translator = () => {
           <option value="de">German</option>
           <option value="hi">Hindi</option>
           <option value="zh">Chinese</option>
-          {/* Add more languages as needed */}
         </select>
         <button className="translate-button" onClick={handleTranslate}>
           Translate

@@ -5,12 +5,14 @@ body {
   background-color: #f2f4f8;
   margin: 0;
   padding: 0;
+  background-image: none
 }
 
 .blog-container {
   max-width: 900px;
   margin: auto;
   padding: 40px 20px;
+
 }
 
 .blog-title {

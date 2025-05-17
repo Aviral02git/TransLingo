@@ -1,266 +1,129 @@
-/* services.css */
-
 .services-container {
-    padding: 3rem;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f0f8ff, #ffffff);
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .services-banner {
-    position: relative;
-    padding: 120px 20px;
-    text-align: center;
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .services-banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    border-radius: 12px;
-  }
-  
-  .services-banner h1,
-  .services-banner p {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .services-banner h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-  }
-  
-  .services-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    animation: fadeInUp 1s ease forwards;
-  }
-  
-  .services-header h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1a202c;
-  }
-  
-  .services-header h2 span {
-    color: #007bff;
-    transition: color 0.3s ease;
-  }
-  
-  .services-header h2 span:hover {
-    color: #0056b3;
-    text-decoration: underline;
-  }
-  
-  .services-header p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-top: 0.5rem;
-  }
-  
-  section {
-    margin-bottom: 3rem;
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.3s;
-  }
-  
-  section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  /* Updated Hero Section */
-  .hero-section {
-    position: relative;
-    padding: 120px 20px;
-    text-align: center;
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    z-index: 1;
-    border-radius: 12px;
-  }
-  
-  .hero-section h1,
-  .hero-section p {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .hero-section h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-section p {
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-  
-  /* Simple fade-in animation */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    .services-container {
-      padding: 2rem;
-    }
-  
-    .services-header h2 {
-      font-size: 2rem;
-    }
-  
-    section {
-      margin-bottom: 2rem;
-    }
-  
-    .hero-section {
-      padding: 80px 15px;
-    }
-  
-    .hero-section h1 {
-      font-size: 1.8rem;
-    }
-  
-    .hero-section p {
-      font-size: 1rem;
-    }
-  }
-  
-  /* Service section styles */
-  .service-section {
-    background-color: #fff;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-  
-  .service-section h3 {
-    font-size: 1.5rem;
-    color: #34495e;
-    margin-bottom: 1rem;
-  }
-  
-  .card-grid {
-    display: grid;
+    display: flex;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-  
-  .card {
+    flex-wrap: wrap; 
+    justify-content: center; 
     padding: 1rem;
-    background-color: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
   }
   
-  .card:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  .herobanner-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #f7f9fc;
+    border-radius: 12px;
+    margin: 2rem 0;
+    background-image: none
   }
   
-  .card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2c3e50;
+  .hero-text {
+    flex: 1;
+    max-width: 50%;
   }
   
-  .card-subtitle {
-    font-size: 1rem;
-    font-style: italic;
-    color: #16a085;
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
   }
   
-  .card-category {
-    font-size: 0.85rem;
-    color: #7f8c8d;
-    margin-top: 0.5rem;
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #444;
   }
   
-  /* Quiz Button Styles */
-  .quiz-options button {
-    display: block;
+  .hero-image {
+    flex: 1;
+    max-width: 50%;
+
+  }
+  
+  .hero-image img {
     width: 100%;
-    padding: 0.6rem;
-    margin-bottom: 0.5rem;
-    background-color: #ecf0f1;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  .service-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #222;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .lesson-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .start-lesson-btn {
+    
+    margin: 1rem auto 0 auto; /* Top, Auto Left/Right, Bottom */
+    background-color: #2196f3;
+    color: #fff;
     border: none;
-    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
+    display: block;
     transition: background-color 0.3s ease;
   }
   
-  .quiz-options button:hover {
-    background-color: #d0d3d4;
+  .start-lesson-btn:hover {
+    background-color: #0056b3;
   }
   
-  .quiz-options .correct {
-    background-color: #2ecc71 !important;
-    color: white;
+  .extras-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+    justify-content: center;
   }
   
-  .quiz-options .incorrect {
-    background-color: #e74c3c !important;
-    color: white;
-  }
-  
-  /* Progress Card Styles */
-  .progress-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    text-align: center;
-  }
-  
-  .progress-card {
+  .extra-card {
     background-color: #ffffff;
-    padding: 1.2rem;
-    border-radius: 10px;
-    border: 1px solid #e1e1e1;
-    transition: transform 0.2s ease;
+    flex: 1 1 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   }
   
-  .progress-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .progress-card .value {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .progress-card .label {
-    font-size: 1rem;
-    color: #7f8c8d;
+  .extra-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
   }
   
