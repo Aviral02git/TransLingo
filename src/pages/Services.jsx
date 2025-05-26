@@ -27,21 +27,22 @@ const Services = () => {
       <section className="services-grid">
         {/* Vocabulary Builder */}
         <div className="service-card">
-          <h3>🗣️ Vocabulary Builder</h3>
+          <h3>Vocabulary Builder</h3>
           <p>Master new words daily with interactive flashcards and pronunciation guides.</p>
           <Dictionary />
         </div>
+        
 
         {/* Daily Quizzes */}
         <div className="service-card">
-          <h3>🎯 Daily Quizzes</h3>
+          <h3>Daily Quizzes</h3>
           <p>Take fun short quizzes to test and strengthen your memory.</p>
           <Quiz />
         </div>
 
         {/* Personalized Lessons */}
         <div className="service-card">
-          <h3>📚 Personalized Lessons</h3>
+          <h3>Personalized Lessons</h3>
           <p>Learn at your own pace with curated lesson paths that match your current proficiency and long-term language goals. Whether you're a beginner or looking to polish your fluency, our modules cover every essential area to help you grow with confidence.</p>
           <ul className="lesson-list">
             <li>Greetings & Introductions</li>
@@ -55,7 +56,7 @@ const Services = () => {
 
         {/* Streak Tracker */}
         <div className="service-card">
-          <h3>🔥 Streak Tracker</h3>
+          <h3>Streak Tracker</h3>
           <p>Keep your streak alive and stay consistent with your learning journey!</p>
         </div>
       </section>
@@ -63,11 +64,11 @@ const Services = () => {
       {/* Progress & Translator Section */}
       <section className="extras-section">
         <div className="extra-card">
-          <h3>📈 Your Learning Progress</h3>
+          <h3>Your Learning Progress</h3>
           <Progress />
         </div>
         <div className="extra-card">
-          <h3>🌐 Instant Translator</h3>
+          <h3>Instant Translator</h3>
           <Translator />
         </div>
       </section>

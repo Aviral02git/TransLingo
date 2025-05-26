@@ -43,7 +43,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      <h3 className="quiz-title">🧠 Quick Language Quiz</h3>
+      <h3 className="quiz-title"> Quick Language Quiz</h3>
 
       {showResult ? (
         <div className="text-center">

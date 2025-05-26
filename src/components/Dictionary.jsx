@@ -12,7 +12,7 @@ const vocabulary = [
 const Dictionary = () => {
   return (
     <div className="dictionary-container">
-      <h2 className="dictionary-title">📖 TransLingo Dictionary</h2>
+      <h2 className="dictionary-title"> TransLingo Dictionary</h2>
       <p className="dictionary-subtitle">Explore essential words and their meanings with ease.</p>
 
       <div className="dictionary-grid">

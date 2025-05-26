@@ -1,25 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background: #f9f9f9cc; 
-  backdrop-filter: blur(12px);
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: sticky;
   top: 0;
   z-index: 1000;
   font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #444; 
-  letter-spacing: 0.5px;
+  color: #333;
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
 .navbar-links {
@@ -31,50 +38,67 @@
 .navbar-links a {
   text-decoration: none;
   font-weight: 500;
-  color: #555; 
+  font-size: 1rem;
+  color: #444;
   transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background-color: #5e35b1;
+  transition: width 0.3s ease-in-out;
 }
 
 .navbar-links a:hover {
-  color: #5e35b1; 
+  color: #5e35b1;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .auth-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .login-btn,
 .signup-btn {
-  padding: 0.45rem 1.4rem;
+  padding: 0.5rem 1.3rem;
   font-size: 0.95rem;
   font-weight: 500;
-  border-radius: 100px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .login-btn {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #007bff;
-  border: 1.8px solid #007bff;
+  border: 1.6px solid #007bff;
 }
 
 .login-btn:hover {
   background-color: #e6f0ff;
-  color: #007bff;
+  color: #0056b3;
 }
 
 .signup-btn {
-  background: #007bff;
-  color: #fff;
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
 }
 
 .signup-btn:hover {
-  background: #0062cc;
+  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
@@ -84,18 +108,27 @@
     padding: 1rem 1.5rem;
   }
 
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+
   .navbar-links {
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    align-items: flex-start;
     width: 100%;
+    gap: 1rem;
   }
 
   .auth-buttons {
     margin-top: 1rem;
     width: 100%;
-    display: flex;
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  .login-btn,
+  .signup-btn {
+    width: 100%;
+    text-align: center;
   }
 }

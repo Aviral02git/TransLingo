@@ -40,7 +40,7 @@ const Translator = () => {
 
   return (
     <div className="translator-container">
-      <h3 className="translator-title"> 🌏 Language Translator</h3>
+      <h3 className="translator-title">  Language Translator</h3>
       <div className="translator-form">
         <textarea
           placeholder="Enter text to translate..."

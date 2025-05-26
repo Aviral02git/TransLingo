@@ -11,7 +11,7 @@ const Progress = () => {
 
   return (
     <div className="progress-container">
-      <h3 className="progress-title">📈 Your Progress</h3>
+      <h3 className="progress-title"> Your Progress</h3>
       <div className="progress-grid">
         <div className="progress-card">
           <p className="progress-number blue">{userProgress.wordsLearned}</p>
@@ -22,7 +22,7 @@ const Progress = () => {
           <p className="progress-label">Quizzes Completed</p>
         </div>
         <div className="progress-card">
-          <p className="progress-number red">{userProgress.streakDays} 🔥</p>
+          <p className="progress-number red">{userProgress.streakDays} </p>
           <p className="progress-label">Day Streak</p>
         </div>
       </div>
