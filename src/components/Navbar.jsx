@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from '../firebase';
+import { signOut, onAuthStateChanged } from 'firebase/auth';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe(); // cleanup
+  }, []);
+
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        alert('Logged out successfully');
+        navigate('/login');
+      })
+      .catch((error) => {
+        alert('Error logging out: ' + error.message);
+      });
+  };
+
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo">TransLingo</Link>
@@ -15,8 +41,14 @@ const Navbar = () => {
       </div>
 
       <div className="auth-buttons">
-        <button className="login-btn">Login</button>
-        <button className="signup-btn">Sign Up</button>
+        {user ? (
+          <button onClick={handleLogout} className="logout-btn">Logout</button>
+        ) : (
+          <>
+            <button className="login-btn" onClick={() => navigate('/login')}>Login</button>
+            <button className="signup-btn" onClick={() => navigate('/signup')}>Sign Up</button>
+          </>
+        )}
       </div>
     </nav>
   );
