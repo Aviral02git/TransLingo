@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAJfpMNrJtNfFhLfPegXJwa_OuAcnTUGU",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "languagetranslator-4f99a.firebaseapp.com",
   projectId: "languagetranslator-4f99a",
   storageBucket: "languagetranslator-4f99a.appspot.com",
