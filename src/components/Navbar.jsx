@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
+import { auth } from '../firebase/firebase.js';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 
 const Navbar = () => {

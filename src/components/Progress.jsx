@@ -1,8 +1,8 @@
 import React from 'react';
-import './Progress.css'; // Make sure this CSS file exists
+import './Progress.css'; 
 
 const Progress = () => {
-  // Dummy data (replace with real user data from Firebase later)
+
   const userProgress = {
     wordsLearned: 75,
     quizzesCompleted: 5,
