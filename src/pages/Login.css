@@ -1,0 +1,93 @@
+/* src/pages/Login.css */
+
+.auth-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    /* min-height: calc(100vh - 60px); */ /* Adjust based on Navbar height to center content */
+                                        /* 100vh - height of navbar - to fill remaining viewport height */
+                                        /* You might need to check your Navbar's actual height and adjust 60px */
+    min-height: 100vh; /* A simpler starting point if Navbar isn't fixed or you want it behind */
+    background-color: #f0f2f5; /* Light background for the page */
+    padding: 20px;
+  }
+  
+  .auth-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Limit width for better readability on larger screens */
+    text-align: center;
+  }
+  
+  .auth-card h2 {
+    font-size: 2em; /* Larger heading */
+    margin-bottom: 30px; /* Space below heading */
+    color: #333; /* Darker text for readability */
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 20px; /* Space between form groups */
+  }
+  
+  .form-group {
+    text-align: left; /* Align labels to the left */
+  }
+  
+  .form-group label {
+    display: block; /* Make label take its own line */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Slightly lighter text than heading */
+  }
+  
+  .form-group input {
+    width: 100%; /* Input takes full width of its parent */
+    padding: 12px;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff; /* Highlight border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Subtle blue glow on focus */
+  }
+  
+  .auth-button {
+    background-color: #007bff; /* Primary button color (matching Navbar's blue) */
+    color: white; /* White text on button */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    width: 100%; /* Make button full width of the card */
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .auth-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .auth-switch {
+    margin-top: 20px; /* Space above the switch link */
+    color: #666; /* Lighter text for the prompt */
+  }
+  
+  .auth-switch a {
+    color: #007bff; /* Link color matching primary button */
+    text-decoration: none; /* No underline by default */
+    font-weight: bold;
+  }
+  
+  .auth-switch a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
